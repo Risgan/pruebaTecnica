@@ -1,0 +1,28 @@
+<div>
+    <h3>{{heroData.name}}</h3>
+    <app-image (click)="showDetail()" [setImg]="heroData.images.lg"></app-image>
+    
+</div>
+
+<div class="products--grid">
+    <div class="circulo rojo">
+        {{heroData.powerstats.combat}}
+    </div>
+    <div class="circulo verde">
+        {{heroData.powerstats.durability}}
+    </div>
+    <div class="circulo azul">
+        {{heroData.powerstats.intelligence}}
+    </div>
+    <div class="circulo amarillo">
+        {{heroData.powerstats.power}}
+    </div>
+    <div class="circulo mag">
+        {{heroData.powerstats.speed}}
+    </div>
+    <div class="circulo gray">
+        {{heroData.powerstats.strength}}
+    </div>
+</div>
+<h5>Aliases</h5>
+<p class="aliases" *ngFor="let alias of heroData.biography.aliases">{{alias}}</p>

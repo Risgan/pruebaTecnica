@@ -1,0 +1,79 @@
+
+
+<div class="contenedor" *ngIf="heroData">
+    <h3>{{heroData.name}}</h3>
+    <app-image [setImg]="heroData.images.md"></app-image> 
+    <br>
+
+
+<div id="carouselExampleIndicators" class="carousel carousel-dark slide"  data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h4>Connections</h4>
+        <div class="subContenedor" *ngIf="heroData">
+            <div>
+                <h6>groupAffiliation: {{heroData.connections.groupAffiliation}}</h6>
+                <h6>relatives: {{heroData.connections.relatives}}</h6>
+            </div>            
+        </div>
+      </div>
+      <div class="carousel-item">
+        <h4>Appearance</h4>
+        <div class="subContenedor" *ngIf="heroData">
+            <h6>eyeColor: {{heroData.appearance.eyeColor}}</h6>
+            <h6>gender: {{heroData.appearance.gender}}</h6>
+            <h6>hairColor: {{heroData.appearance.hairColor}}</h6>
+            <h6>height: {{heroData.appearance.height[0]}}, {{heroData.appearance.height[1]}}</h6>
+            <h6>race: {{heroData.appearance.race}}</h6>
+            <h6>weight: {{heroData.appearance.weight[0]}}, {{heroData.appearance.weight[1]}}</h6>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <h4>Biography</h4>
+        <div class="subContenedor" *ngIf="heroData">
+            <h6 *ngFor="let alias of heroData.biography.aliases">aliases: {{alias}}</h6>
+            <h6>alignment: {{heroData.biography.alignment}}</h6>
+            <h6>alterEgos: {{heroData.biography.alterEgos}}</h6>
+            <h6>firstAppearance: {{heroData.biography.firstAppearance}}</h6>
+            <h6>fullName: {{heroData.biography.fullName}}</h6>
+            <h6>placeOfBirth: {{heroData.biography.placeOfBirth}}</h6>
+            <h6>publisher: {{heroData.biography.publisher}}</h6>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <h4>Powerstats</h4>
+        <div class="subContenedor" *ngIf="heroData">
+            <h6>combat: {{heroData.powerstats.combat}}</h6>
+            <h6>durability: {{heroData.powerstats.durability}}</h6>
+            <h6>intelligence: {{heroData.powerstats.intelligence}}</h6>
+            <h6>power: {{heroData.powerstats.power}}</h6>
+            <h6>speed: {{heroData.powerstats.speed}}</h6>
+            <h6>strength: {{heroData.powerstats.strength}}</h6>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <h4>Work</h4>
+        <div class="subContenedor" *ngIf="heroData">
+            <h6>base: {{heroData.work.base}}</h6>
+            <h6>occupation: {{heroData.work.occupation}}</h6>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
