@@ -14,14 +14,8 @@ const routes: Routes = [
       {
         path: '', component:HomeComponent
       },
-      // {
-      //   path: 'detalle', component:DetalleComponent
-      // }
     ]
   },
-  // {
-  //   path: 'detalle', component: DetalleComponent
-  // },
   {
     path: '**', component: NotFountComponent
   },
